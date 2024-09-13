@@ -1,0 +1,5 @@
+package com.gentech.dept.service;
+
+public interface DepartmentService {
+
+}

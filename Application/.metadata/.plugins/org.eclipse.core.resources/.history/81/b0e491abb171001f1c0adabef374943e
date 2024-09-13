@@ -1,0 +1,23 @@
+package com.gentech.dept.serviceimpl;
+
+import java.util.List;
+
+import com.gentech.dept.entity.Department;
+import com.gentech.dept.repository.DepartmentRepository;
+import com.gentech.dept.service.DepartmentService;
+
+public class DepartmentServiceImpl implements DepartmentService{
+	 
+	private DepartmentRepository deptRepository;
+
+	public DepartmentServiceImpl(DepartmentRepository deptRepository) {
+		super();
+		this.deptRepository = deptRepository;
+	}
+	
+	@Override
+	public List<Department> getDepartment()
+	{
+		return deptRepository.findAll();
+	}
+}

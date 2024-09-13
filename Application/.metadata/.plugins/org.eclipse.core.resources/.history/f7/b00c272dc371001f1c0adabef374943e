@@ -1,0 +1,5 @@
+package com.gentech.employee.service;
+
+public interface EmployeeService {
+
+}

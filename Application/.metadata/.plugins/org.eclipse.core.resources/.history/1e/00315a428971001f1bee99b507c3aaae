@@ -1,0 +1,5 @@
+package com.gentech.dept.repository;
+
+public interface DepartmentRepository {
+
+}

@@ -1,0 +1,5 @@
+package com.gentech.dept.controller;
+
+public class DepartmentController {
+
+}

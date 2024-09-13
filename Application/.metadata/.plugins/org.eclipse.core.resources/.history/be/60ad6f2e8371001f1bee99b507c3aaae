@@ -1,0 +1,5 @@
+package com.gentech.dept.entity;
+
+public class Department {
+
+}
