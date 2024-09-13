@@ -30,6 +30,4 @@ public class Sample {
     {
         System.out.println("It is display7 method statement...");
     }
-
-
 }
