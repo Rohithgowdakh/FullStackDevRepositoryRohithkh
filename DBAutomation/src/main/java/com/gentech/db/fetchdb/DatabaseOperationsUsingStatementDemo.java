@@ -30,7 +30,7 @@ public class DatabaseOperationsUsingStatementDemo {
 				System.out.printf("%-12s",dno);
 				System.out.printf("%-12s",deptname);
 				System.out.printf("%-12s",place);
-				System.out.printf("\n");
+				System.out.printf(" \n ");
 			}
 		}catch (Exception e) 
 		{

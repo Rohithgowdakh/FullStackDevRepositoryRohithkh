@@ -1,7 +1,6 @@
 package org.example.reflection2;
 
 public class Sample {
-
     static{
         display1();
         display2();
@@ -30,5 +29,5 @@ public class Sample {
         System.out.println("It is display5 method statement...");
     }
 
-
+  
 }
