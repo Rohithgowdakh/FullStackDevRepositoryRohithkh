@@ -16,6 +16,7 @@ public class ReadExcelContentDemo {
 	
 	private static void readContent()
 	{
+		
 		FileInputStream fin=null;
 		Workbook wb=null;
 		Sheet sh=null;
@@ -69,7 +70,7 @@ public class ReadExcelContentDemo {
 				sh=null;
 				row=null;
 				cell=null;
-			}catch (Exception e) 
+			}catch (Exception e)
 			{
 				e.printStackTrace();
 			}

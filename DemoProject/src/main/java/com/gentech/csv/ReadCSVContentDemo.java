@@ -1,9 +1,7 @@
 package com.gentech.csv;
 
-import com.opencsv.CSVReader;
-
 import java.io.FileReader;
-
+import com.opencsv.CSVReader;
 public class ReadCSVContentDemo {
     public static void main(String[] args) {
         readContent();
@@ -15,7 +13,7 @@ public class ReadCSVContentDemo {
         CSVReader reader=null;
         try
         {
-            fr=new FileReader("E:\\Example\\Employees.csv");
+            fr=new FileReader("D:\\CSV_Files\\Employees.csv");
             reader=new CSVReader(fr);
 
             String data[]=null;

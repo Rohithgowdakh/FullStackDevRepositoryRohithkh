@@ -15,7 +15,7 @@ public class WriteCSVContentDemo {
         CSVWriter writer=null;
         try
         {
-            fw=new FileWriter("E:\\Example\\Employees.csv");
+            fw=new FileWriter("D:\\CSV_Files\\Employees1.csv");
             writer=new CSVWriter(fw);
 
             String header[]={"empid","ename","jobname","salary","dname","location"};
