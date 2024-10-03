@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
     <script>
         console.log("welcome to javascpript learning");
         document.write("hello i am rohith");
@@ -148,8 +149,49 @@
         }
 
         document.write(trueTrueOrFalse(true));
+        //Equals Operator(==)
+        function testEquals(val)
+        {
+            if(val==12)
+            {
+                return "Equals";
+            }
+            return "Not Equal"
+        }
+
+        console.log(testEquals(10));
+
+        //Comparision with strict equality operator(===)
+        function strictEqula(val)
+        {
+            if(val==="12")  /* in 12=="12" true but in 12==="12" makes false*/
+            {
+                return "Equals";
+            }
+            return "Not Equal"
+        }
+
+        console.log(strictEqula(10));
+        
     </script>
 </head>
 <body>
+    <h1>Hello, World!</h1>
+    <button onclick="sayHello()">Click Me</button>
+    <button onclick="loglaptime()">Addition</button>
+    <script>
+        function sayHello() {
+            alert('Hello from JavaScript!');
+        }
+    </script>
+    
+    <button id="increment-nutton" onclick="increment()">INCREMENt</button>
+    <br><br>
+    <h1 id="count-el">0</h1>
+    <button id="increment-button" onclick="increment1()">INCREMENT_onclick</button>
+    <button id="save-btn" onclick="save()">Save</button>
+    <p id="save-el"> Previous Entries :</p>
+    <script src="index.js"></script>
+    
 </body>
 </html>
