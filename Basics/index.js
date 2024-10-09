@@ -38,3 +38,18 @@ let total=username+msg;
 console.log(username+msg+" with bad lucks");
 
 console.log(total);
+
+let myPoints=1;
+function add3Points()
+{
+    myPoints+=3;
+}
+
+function remove1Points()
+{
+    myPoints-=1;
+}
+
+add3Points();
+add3Points();
+add3Points();

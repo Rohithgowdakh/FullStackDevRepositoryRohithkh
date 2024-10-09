@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,61 +16,60 @@
         /*Data Types
             undefined,null,boolean,string,symbol,number and object
         */
-       var name="ROhith"//var can be used throughout the whole program
-       name=8
-       let ourName="dddds"//let will only be used within the scope of where you declared that.
-       const pi=3.14;//const the variable cannot change.
-       //pi=77; it makes error 
+        var name = "ROhith"//var can be used throughout the whole program
+        name = 8
+        let ourName = "dddds"//let will only be used within the scope of where you declared that.
+        const pi = 3.14;//const the variable cannot change.
+        //pi=77; it makes error 
         var a;
         console.log
-        var b=2;
-        a=7;
+        var b = 2;
+        a = 7;
         a++//increment
         a--//decrement
-        a+=6;
-        a-=3;
-        b=a;
-        var myFirstName="rohith";
-        var myLastName="K H";
-        var myStr="I am a \"double Quoted\" string insiide double\" quotes";
+        a += 6;
+        a -= 3;
+        b = a;
+        var myFirstName = "rohith";
+        var myLastName = "K H";
+        var myStr = "I am a \"double Quoted\" string insiide double\" quotes";
         console.log(myStr);
-        var myStr1='my portfolio liknk is"nuuuefiuve.com"';
-        myStr1+=myStr;
+        var myStr1 = 'my portfolio liknk is"nuuuefiuve.com"';
+        myStr1 += myStr;
         console.log(myStr1);
-        var firstnamelength=0;
-        var firstletteroffirstname="";
-        var firstName="Rohith "
-        firstnamelength=firstName.length
+        var firstnamelength = 0;
+        var firstletteroffirstname = "";
+        var firstName = "Rohith "
+        firstnamelength = firstName.length
         document.write(firstnamelength);
-        firstletteroffirstname=firstName[0]
-        document.write( firstletteroffirstname);
+        firstletteroffirstname = firstName[0]
+        document.write(firstletteroffirstname);
 
-        function cfsemployeeDet(name,age,job,salary)
-        {
-            var result="";
-            result+="The "+name+" is "+age+" year old"+job+salary;
+        function cfsemployeeDet(name, age, job, salary) {
+            var result = "";
+            result += "The " + name + " is " + age + " year old" + job + salary;
             return result;
         }
-        document.write(cfsemployeeDet("TO",10,"dev",1000));
-        document.write(cfsemployeeDet("TeeO",30,"dev",1000));
+        document.write(cfsemployeeDet("TO", 10, "dev", 1000));
+        document.write(cfsemployeeDet("TeeO", 30, "dev", 1000));
 
-        var ourArray1=["john ",23]; //array
-        var ourArray =[["Buulls",23],["udub",192]];
+        var ourArray1 = ["john ", 23]; //array
+        var ourArray = [["Buulls", 23], ["udub", 192]];
         document.write(ourArray[0]);
-        var myData=ourArray[0];
-        ourArray[1]=45;//we can modify array values, new value applied not replaced
+        var myData = ourArray[0];
+        ourArray[1] = 45;//we can modify array values, new value applied not replaced
 
-        var mulArray=[[1,2,3],[4,4,5],[[1,2,3],11,14]];
+        var mulArray = [[1, 2, 3], [4, 4, 5], [[1, 2, 3], 11, 14]];
         document.write(mulArray[2][0]);
 
-        ourArray.push([22,33,44]);
+        ourArray.push([22, 33, 44]);
         document.write(ourArray);
         ourArray.pop();
         document.write(ourArray);
-        var ourArray3 =[["Buulls",23],["udub",192]];
+        var ourArray3 = [["Buulls", 23], ["udub", 192]];
         ourArray3.shift();//it removes first element
         document.write(ourArray3);
-        ourArray3.unshift([9,8,7])//add to first element
+        ourArray3.unshift([9, 8, 7])//add to first element
         document.write(ourArray3);
 
 
@@ -82,78 +82,70 @@
         myReusableFunction();
         myReusableFunction();
 
-        function functionWithArgs(a,b) {
-            document.write(a+b);
+        function functionWithArgs(a, b) {
+            document.write(a + b);
         }
 
-        functionWithArgs(10,5);
+        functionWithArgs(10, 5);
 
-        var globalScope=10;
-        function LocalAndGlobalScope()
-        {
-            var localScope=20;
+        var globalScope = 10;
+        function LocalAndGlobalScope() {
+            var localScope = 20;
 
             return localScope;
         }
 
         document.write(LocalAndGlobalScope());
-     
-     //   document.write(localScope);//localscope cant use outside the function
-       
+
+        //   document.write(localScope);//localscope cant use outside the function
+
         document.write(globalScope);
 
-        var sum=0;
-        function addThree()
-        {
-            return sum=sum+3;
-            
+        var sum = 0;
+        function addThree() {
+            return sum = sum + 3;
+
         }
 
         document.write(addThree());
 
-        function addFive()
-        {
-            return sum=sum+5;
-            
+        function addFive() {
+            return sum = sum + 5;
+
         }
 
         document.write(addFive());
 
-        var processed=0;
-        function processArgs(num)
-        {
-            return (num+3)/2;
+        var processed = 0;
+        function processArgs(num) {
+            return (num + 3) / 2;
         }
 
-        processed=processArgs(5);
+        processed = processArgs(5);
         document.write(processed);
 
-        function nextInLine(arr,item)
-        {
+        function nextInLine(arr, item) {
             arr.push(6);
             return arr.shift();
         }
-        var array=[1,2,3,4,5];
-        document.write("Before: "+JSON.stringify(array));
-        document.write(nextInLine(array,6));
-        document.write("After: "+array);
+        var array = [1, 2, 3, 4, 5];
+        document.write("Before: " + JSON.stringify(array));
+        document.write(nextInLine(array, 6));
+        document.write("After: " + array);
 
-        function trueTrueOrFalse(isTrue)
-        {
-            if(isTrue){
+        function trueTrueOrFalse(isTrue) {
+            if (isTrue) {
                 return "yes it is true";
 
             }
             return "no , it is false";
-            
+
         }
 
         document.write(trueTrueOrFalse(true));
         //Equals Operator(==)
-        function testEquals(val)
-        {
-            if(val==12)
-            {
+        function testEquals(val) {
+            if (val == 12) {
                 return "Equals";
             }
             return "Not Equal"
@@ -162,19 +154,18 @@
         console.log(testEquals(10));
 
         //Comparision with strict equality operator(===)
-        function strictEqula(val)
-        {
-            if(val==="12")  /* in 12=="12" true but in 12==="12" makes false*/
-            {
+        function strictEqula(val) {
+            if (val === "12")  /* in 12=="12" true but in 12==="12" makes false*/ {
                 return "Equals";
             }
             return "Not Equal"
         }
 
         console.log(strictEqula(10));
-        
+
     </script>
 </head>
+
 <body>
     <h1>Hello, World!</h1>
     <button onclick="sayHello()">Click Me</button>
@@ -191,7 +182,37 @@
     <button id="increment-button" onclick="increment1()">INCREMENT_onclick</button>
     <button id="save-btn" onclick="save()">Save</button>
     <p id="save-el"> Previous Entries :</p>
-    <script src="index.js"></script>
+
+    <!--using for loop for below pattern-->
+    <script>
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write(j);
+                
+            }
+            document.write("</br>");
+        }
+        document.write("</br>");
+        
+    </script>
     
+    <!-- using do-while loop for below pattern-->
+    <script>
+        let i=5;
+        do{
+            let j=1;
+            do{
+                document.write(j);
+                j++;
+            }while(j<=i)
+            document.write("<br/>");
+            i--;
+        }while(i>=1)
+    </script>
+
+
+    <script src="index.js"></script>
+
 </body>
+
 </html>
