@@ -1,0 +1,38 @@
+.calculator .num{
+    color:black;
+    background-color: darkkhaki;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin:10px;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    /* border-color: black; */
+}
+.calculator .num:active{
+    background-color: darkolivegreen;
+    border:2px solid black;
+}
+.spa{
+    margin-left: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+.ope{
+    background-color: goldenrod;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin:10px;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: bold;
+}
+.ope:active{
+    background-color: chocolate;
+    border:2px solid black;
+}
