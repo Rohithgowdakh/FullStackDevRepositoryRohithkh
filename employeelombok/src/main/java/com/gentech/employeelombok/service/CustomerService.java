@@ -8,5 +8,11 @@ public interface CustomerService {
 
 	Customer createCustomer(Customer customer);
 	
-	List<Customer> getCustomer(Customer customer);
+	List<Customer> getCustomers();
+	
+	Customer getCustomer(Long id);
+	
+	Customer upadateCustomer(Customer customer,Long id);
+	
+	void deleteCustomer(Long id);
 }

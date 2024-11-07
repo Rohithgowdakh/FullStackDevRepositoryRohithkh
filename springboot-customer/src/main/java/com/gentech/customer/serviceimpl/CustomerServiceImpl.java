@@ -2,8 +2,11 @@ package com.gentech.customer.serviceimpl;
 
 import java.util.List;
 
-import org.hibernate.query.sqm.tree.domain.AbstractSqmSpecificPluralPartPath;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.gentech.customer.entity.Customer;
@@ -53,5 +56,61 @@ public class CustomerServiceImpl implements CustomerService{
 		
 	}
 
+	@Override
+	public List<Customer> getAllCustomersByCustomerName(String name) {
+		return custRepository.findByCustomerName(name);
+	}
+
+	@Override
+	public List<Customer> getAllCustomersByLocation(String name) {
+		return custRepository.findByLocation(name);
+	}
+
+	@Override
+	public List<Customer> getAllCustomersByNameAndLocation(String name, String loc) {
+		return custRepository.findByCustomerNameAndLocation(name, loc);
+	}
+
+	@Override
+	public List<Customer> getAllCustomersByPartialCustomerName(String name) {
+		return custRepository.findByCustomerNameContaining(name);
+	}
+
+	@Override
+	public List<Customer> getCustomers(int pageNumber, int pageSize) {
+		
+		Pageable pages = PageRequest.of(pageNumber, pageSize);
+		return custRepository.findAll(pages).getContent();
+	}
+
+	@Override
+	public List<Customer> getCustomers(int pageNumber, int pageSize, String columnName) {
+		Sort sort=Sort.by(Direction.ASC, columnName);
+		Pageable pages = PageRequest.of(pageNumber, pageSize, sort);
+		return custRepository.findAll(pages).getContent();
+	}
+
+	@Override
+	public List<Customer> getAllCustomersByNameOrLocation(String name, String loc) {
+		return custRepository.getAllCustomersByNameAndLocation(name, loc);
+	}
+
+	@Override
+	public Integer deleteBySpecificCustomerName(String name) {
+		return custRepository.getDeleteByCustomerName(name);
+	}
+
+	@Override
+	public Integer updateEmailForSpecificCustomer(String email, String customerName) {
+		return custRepository.updateEmailIdByCustomerName(email,customerName);
+	}
+
+	@Override
+	public Integer updateCustomerNameAndLocationById(String name, String location, Long id) {
+		return custRepository.updateCustomerNameAndLocationById(name, location, id);
+	}
+
+	
+	
 	
 }
