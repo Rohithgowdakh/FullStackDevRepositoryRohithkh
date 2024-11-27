@@ -3,12 +3,12 @@ class Fac
 {
 	int getFac(int num)
 	{
-		int nu=1;
-		for(int i=num;i>=1;i--)
+		
+		for(int i=num-1;i>=1;i--)
 		{
-			nu=nu*i;
+			num=num*i;
 		}
-		return nu;
+		return num;
 	}
 }
 public class Factorial {

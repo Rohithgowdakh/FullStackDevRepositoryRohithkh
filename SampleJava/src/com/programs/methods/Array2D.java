@@ -3,11 +3,12 @@ class Array1
 {
 	void display(char a[][])
 	{
-		String result="";
+	
 		
 		for(int i=0;i<a[0].length;i++)
 		{
-			System.out.print(result+" ");
+			
+			System.out.print(a[0][i]+" ");
 		}
 	}
 }
