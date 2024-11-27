@@ -4,8 +4,8 @@ import java.sql.*;
 
 public class DatabaseOperationsUsingPreparedStmtDemo {
     public static void main(String[] args) {
-    //    readRecords();
-        insertRecords();
+        readRecords();
+//        insertRecords();
     }
 
     private static void readRecords()
@@ -14,7 +14,7 @@ public class DatabaseOperationsUsingPreparedStmtDemo {
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/gentech", "root", "root");
+            conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/gentech", "root", "Rohithkh09#");
             String query="select * from dept";
             PreparedStatement stmt=conn.prepareStatement(query);
             ResultSet rs=stmt.executeQuery();
@@ -58,7 +58,7 @@ public class DatabaseOperationsUsingPreparedStmtDemo {
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/gentech", "root", "root");
+            conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/gentech", "root", "Rohithkh09#");
             String query="insert into dept values(50,'HEALTH','BANGALORE')";
             PreparedStatement stmt=conn.prepareStatement(query);
             int v1=stmt.executeUpdate(query);

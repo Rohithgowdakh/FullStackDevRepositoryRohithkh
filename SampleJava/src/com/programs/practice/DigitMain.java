@@ -1,7 +1,7 @@
 package com.programs.practice;
 class Demo3
 {
-	int reverse(int num)
+	void reverse(int num)
 	{
 		int rem=0;
 		while(num>0)
@@ -10,7 +10,7 @@ class Demo3
 			 System.out.print(rem);
 			 num=num/10;
 		}
-		return rem;
+		
 	}
 }
 public class DigitMain {

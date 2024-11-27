@@ -15,7 +15,7 @@ public class DatabaseOperationsUsingStatementDemo {
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/gentech", "root", "root");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/gentech", "root", "Rohithkh09#");
 			Statement stmt=conn.createStatement();
 			String query="insert into dept values(50,'HEALTH','BANGALORE')";
 			int v1=stmt.executeUpdate(query);
@@ -42,7 +42,7 @@ public class DatabaseOperationsUsingStatementDemo {
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/gentech", "root", "root");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/gentech", "root", "Rohithkh09#");
 			Statement stmt=conn.createStatement();
 			String query="select * from dept";
 			ResultSet rs=stmt.executeQuery(query);
