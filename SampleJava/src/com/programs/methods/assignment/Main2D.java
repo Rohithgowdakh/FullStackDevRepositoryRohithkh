@@ -9,7 +9,7 @@ class Array2D
 		{
 			for(int j=0;j<a[i].length;j++)
 			{
-				System.out.print(a[i][j]+" ");
+				System.out.print(a[j][i]+" ");
 			}
 			System.out.println();
 		}

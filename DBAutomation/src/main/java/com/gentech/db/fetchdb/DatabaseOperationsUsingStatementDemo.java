@@ -1,9 +1,6 @@
 package com.gentech.db.fetchdb;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DatabaseOperationsUsingStatementDemo {
 
@@ -18,18 +15,23 @@ public class DatabaseOperationsUsingStatementDemo {
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/gentech", "root", "root");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/rohithdevdb", "root", "Rohithkh09#");
 			Statement stmt=conn.createStatement();
-			String query="select * from dept";
+			String query="select*from tbl_department;";
 			ResultSet rs=stmt.executeQuery(query);
+			ResultSetMetaData meta=rs.getMetaData();
+			System.out.printf("%-12s", meta.getColumnName(1));
+			System.out.printf("%-12s", meta.getColumnName(2));
+			System.out.printf("%-12s", meta.getColumnName(3));
+			System.out.printf(" \n ");
 			while(rs.next())
 			{
-				String dno=rs.getString("DEPTNO");
-				String deptname=rs.getString("DNAME");
-				String place=rs.getString("LOC");
-				System.out.printf("%-12s",dno);
+				int id=rs.getInt("id");
+				String deptname=rs.getString("deptname");
+				String cityname=rs.getString("cityname");
+				System.out.printf("%-12s",id);
 				System.out.printf("%-12s",deptname);
-				System.out.printf("%-12s",place);
+				System.out.printf("%-12s",cityname);
 				System.out.printf(" \n ");
 			}
 		}catch (Exception e) 

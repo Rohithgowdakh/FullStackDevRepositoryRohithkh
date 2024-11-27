@@ -10,7 +10,7 @@ class TransposeMatrix
 		{
 			for(int j=0;j<b[i].length;j++)
 			{
-				b[j][i]=a[i][j];
+				b[i][j]=a[j][i];
 			}
 			
 		}
