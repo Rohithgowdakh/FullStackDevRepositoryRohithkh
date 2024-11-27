@@ -23,7 +23,7 @@ public class TransposeMain {
 		int res[][]=ob1.getTrans(a);
 		for(int i=0;i<a.length;i++)
 		{
-			for(int j=0;j<a[i].length;j++)
+			for(int j=0;j<res[i].length;j++)
 			{
 				System.out.print(res[i][j]+" ");
 			}
